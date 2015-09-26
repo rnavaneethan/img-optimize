@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  "use strict";
+  'use strict';
   // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
   require('load-grunt-tasks')(grunt);
   // Time how long tasks take. Can help when optimizing build times
@@ -11,13 +11,19 @@ module.exports = function(grunt) {
       tmp: './.tmp',
       dist: './out'
     },
+    jscs: {
+      src: '<%= appConfig.app %>/gruntfile.js',
+      options: {
+        config: '.jscsrc'
+      }
+    },
     clean: {
-      src:[
+      src: [
         '<%= appConfig.tmp %>/{,*/}*',
         '<%= appConfig.dist %>/{,*/}*'
       ]
     },
-    image_resize: {
+    image_resize: { //jscs:ignore requireCamelCaseOrUpperCaseIdentifiers
       resize: {
         options: {
           width: 1024,
@@ -41,7 +47,7 @@ module.exports = function(grunt) {
         },
         files: [
           {
-            expand:true,
+            expand: true,
             cwd: '<%= appConfig.tmp %>/',
             src: ['*.{jpg,jpeg,JPG,JPEG}'],
             dest: '<%= appConfig.dist %>/'
@@ -50,5 +56,5 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('default',['clean','image_resize','imagemin']);
+  grunt.registerTask('default',['clean', 'image_resize', 'imagemin']);
 };

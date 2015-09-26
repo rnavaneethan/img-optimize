@@ -17,6 +17,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-image-resize": "^1.0.0",
+    "grunt-jscs": "^2.1.0",
     "grunt-newer": "^1.1.1",
     "load-grunt-tasks": "^3.3.0",
     "time-grunt": "^1.2.1"

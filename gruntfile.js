@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  "use strict";
   // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
   require('load-grunt-tasks')(grunt);
   // Time how long tasks take. Can help when optimizing build times
@@ -23,7 +24,9 @@ module.exports = function(grunt) {
           height: 1024,
           crop: false,
           autoOrient: true,
-          overwrite: false
+          overwrite: false,
+          upscale: false,
+          quality: 0.75
         },
         cwd: '<%= appConfig.app %>',
         src: ['in/*.{jpg,jpeg,JPG,JPEG}'],

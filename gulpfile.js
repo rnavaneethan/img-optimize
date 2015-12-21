@@ -1,16 +1,13 @@
+/*Gulp JS code*/
 const gulp = require('gulp'),
   del = require('del'),
-  $ = require('gulp-load-plugins')(); //load all gulp plugins
-
-/*customizable config*/
-const width = 1024,
+  imageminMozjpeg = require('imagemin-mozjpeg'),
+  $ = require('gulp-load-plugins')(), //load all gulp plugins
+  width = 1024, /*customizable config*/
   height = 1024,
-  quality = 0.75;
-
-/*Dir setup*/
-const SRC= './in/*.{jpg,jpeg,JPG,JPEG}',
+  quality = 0.75,
+  SRC = './in/*.{jpg,jpeg,JPG,JPEG}',
   DEST = './out/';
-
 gulp.task('clean', function() {
   return del(DEST + '/**/*'); //delete all destination files, just to be clean
 });
@@ -33,6 +30,7 @@ gulp.task('default', ['clean'], function() {
       optimizationLevel: 7,
       cache: false
     }))
+    .pipe(imageminMozjpeg()())
     .pipe($.plumber.stop())
     .pipe(gulp.dest(DEST));
 });

@@ -16,6 +16,7 @@ gulp.task('default', ['clean'], function() {
   return gulp.src(SRC)
     .pipe($.plumber())  //node stream related error handling
     .pipe($.changed(DEST))
+    .pipe($.bytediff.start())
     .pipe($.imageResize({
       'width': width,
       'height': height,
@@ -31,6 +32,7 @@ gulp.task('default', ['clean'], function() {
       cache: false
     }))
     .pipe(imageminMozjpeg()())
+    .pipe($.bytediff.stop())
     .pipe($.plumber.stop())
     .pipe(gulp.dest(DEST));
 });

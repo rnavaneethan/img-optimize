@@ -8,10 +8,10 @@ const gulp = require('gulp'),
   quality = 0.75,
   SRC = './in/*.{jpg,jpeg,JPG,JPEG}',
   DEST = './out/';
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   return del(DEST + '/**/*'); //delete all destination files, just to be clean
 });
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clean'], () => {
   // place code here
   return gulp.src(SRC)
     .pipe($.plumber())  //node stream related error handling
@@ -29,9 +29,9 @@ gulp.task('default', ['clean'], function() {
     .pipe($.imagemin({
       progressive: true,
       optimizationLevel: 7,
-      cache: false
+      cache: false,
+      use: [imageminMozjpeg()]
     }))
-    .pipe(imageminMozjpeg()())
     .pipe($.bytediff.stop())
     .pipe($.plumber.stop())
     .pipe(gulp.dest(DEST));

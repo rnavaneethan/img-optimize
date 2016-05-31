@@ -2,6 +2,8 @@
 const gulp = require('gulp'),
   del = require('del'),
   imageminMozjpeg = require('imagemin-mozjpeg'),
+  parallel = require('concurrent-transform'),
+  os = require("os"),
   $ = require('gulp-load-plugins')(), //load all gulp plugins
   width = 1024, /*customizable config*/
   height = 1024,
@@ -17,21 +19,22 @@ gulp.task('default', ['clean'], () => {
     .pipe($.plumber())  //node stream related error handling
     .pipe($.changed(DEST))
     .pipe($.bytediff.start())
-    .pipe($.imageResize({
-      'width': width,
-      'height': height,
-      'crop': false,
-      'autoOrient': true,
-      'overwrite': false,
-      'upscale': false,
-      'quality': quality
-    }))
-    .pipe($.imagemin({
+    .pipe(parallel($.imageResize({
+        'width': width,
+        'height': height,
+        'crop': false,
+        'autoOrient': true,
+        'overwrite': false,
+        'upscale': false,
+        'quality': quality
+      })
+    ), os.cpus().length)
+    .pipe(parallel($.imagemin({
       progressive: true,
       optimizationLevel: 7,
       cache: false,
       use: [imageminMozjpeg()]
-    }))
+    })), os.cpus().length)
     .pipe($.bytediff.stop())
     .pipe($.plumber.stop())
     .pipe(gulp.dest(DEST));

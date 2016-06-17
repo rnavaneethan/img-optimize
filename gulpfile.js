@@ -18,7 +18,7 @@ gulp.task('default', ['clean'], () => {
   return gulp.src(SRC)
     .pipe($.plumber())  //node stream related error handling
     .pipe($.changed(DEST))
-    .pipe($.bytediff.start())
+    .pipe($.sizediff.start())
     .pipe(parallel($.imageResize({
         'width': width,
         'height': height,
@@ -35,7 +35,7 @@ gulp.task('default', ['clean'], () => {
       cache: false,
       use: [imageminMozjpeg()]
     })), os.cpus().length)
-    .pipe($.bytediff.stop())
+    .pipe($.sizediff.stop())
     .pipe($.plumber.stop())
     .pipe(gulp.dest(DEST));
 });

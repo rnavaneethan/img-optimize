@@ -23,6 +23,8 @@
     "gulp-load-plugins": "^1.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sizediff": "0.0.2",
+    "gulp-util": "^3.0.7",
+    "gulp-webp": "^2.3.0",
     "imagemin-mozjpeg": "^6.0.0"
   }
 }

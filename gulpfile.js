@@ -8,6 +8,7 @@ const gulp = require('gulp'),
   width = 1024, /*customizable config*/
   height = 1024,
   quality = 0.75,
+  bCreateWebp = false,
   SRC = './in/*.{jpg,jpeg,JPG,JPEG}',
   DEST = './out/';
 gulp.task('clean', () => {
@@ -35,7 +36,9 @@ gulp.task('default', ['clean'], () => {
       cache: false,
       use: [imageminMozjpeg()]
     })), os.cpus().length)
+    .pipe(gulp.dest(DEST))
+    .pipe(bCreateWebp ? $.webp() : $.util.noop())
+    .pipe(gulp.dest(DEST))
     .pipe($.sizediff.stop())
-    .pipe($.plumber.stop())
-    .pipe(gulp.dest(DEST));
+    .pipe($.plumber.stop());
 });

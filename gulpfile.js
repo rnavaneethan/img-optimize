@@ -51,9 +51,9 @@ gulp.task('default', () => {
     .pipe(bCreateWebp ? $.webp() : $.util.noop())
     .pipe(gulp.dest(DEST))
     .pipe($.sizediff.stop({
-      'title': 'Summary',
+      'title': 'Saved',
       formatFn: (data) => {
-        return ': bytes saved: ' + filesize(data.diff) + ' (' + (100 - Math.round(data.diffPercent * 100))  + '%)';
+        return filesize(data.diff) + ' (' + (100 - Math.round(data.diffPercent * 100))  + '%)';
       }
     }))
     .pipe($.plumber.stop());

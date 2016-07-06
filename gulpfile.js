@@ -14,7 +14,7 @@ const gulp = require('gulp'),
 gulp.task('clean', () => {
   return del(DEST + '/**/*'); //delete all destination files, just to be clean
 });
-gulp.task('default', ['clean'], () => {
+gulp.task('default', () => {
   // place code here
   return gulp.src(SRC)
     .pipe($.plumber())  //node stream related error handling

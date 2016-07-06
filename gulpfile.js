@@ -4,6 +4,7 @@ const gulp = require('gulp'),
   imageminMozjpeg = require('imagemin-mozjpeg'),
   parallel = require('concurrent-transform'),
   combiner = require('stream-combiner2'),
+  filesize = require('filesize'),
   os = require("os"),
   $ = require('gulp-load-plugins')(), //load all gulp plugins
   width = 1024, /*customizable config*/
@@ -49,6 +50,11 @@ gulp.task('default', () => {
     .pipe(gulp.dest(DEST))
     .pipe(bCreateWebp ? $.webp() : $.util.noop())
     .pipe(gulp.dest(DEST))
-    .pipe($.sizediff.stop())
+    .pipe($.sizediff.stop({
+      'title': 'Summary',
+      formatFn: (data) => {
+        return ': bytes saved: ' + filesize(data.diff) + ' (' + (100 - Math.round(data.diffPercent * 100))  + '%)';
+      }
+    }))
     .pipe($.plumber.stop());
 });

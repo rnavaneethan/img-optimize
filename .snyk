@@ -6,3 +6,7 @@ patch:
         patched: '2016-06-24T15:41:22.790Z'
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
         patched: '2016-06-24T15:41:22.790Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2016-07-07T09:40:13.258Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2016-07-07T09:40:13.258Z'

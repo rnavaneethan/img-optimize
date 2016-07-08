@@ -7,12 +7,18 @@ const gulp = require('gulp'),
   filesize = require('filesize'),
   os = require("os"),
   $ = require('gulp-load-plugins')(), //load all gulp plugins
-  width = 1024, /*customizable config*/
-  height = 1024,
-  quality = 0.75,
-  bCreateWebp = false,
+  defConfig = {
+    'width': 1024,
+    'height': 1024,
+    'quality': 0.75,
+    'createWebP': false
+  },
+  userConfig = {},
   SRC = './in/*.{jpg,jpeg,png,svg,gif}',
   DEST = './out/';
+
+let config = {};
+Object.assign(config, defConfig, userConfig);
 
 /*image processing pipeline
   - Resize the image.
@@ -21,13 +27,13 @@ const gulp = require('gulp'),
 */
 const processImages = combiner.obj(
   $.imageResize({
-    'width': width,
-    'height': height,
+    'width': config.width,
+    'height': config.height,
     'crop': false,
     'autoOrient': true,
     'overwrite': false,
     'upscale': false,
-    'quality': quality
+    'quality': config.quality
   }),
   $.imagemin({
     progressive: true,
@@ -48,12 +54,12 @@ gulp.task('default', () => {
     .pipe($.sizediff.start())
     .pipe(parallel(processImages,os.cpus().length))
     .pipe(gulp.dest(DEST))
-    .pipe(bCreateWebp ? $.webp() : $.util.noop())
+    .pipe(config.createWebP ? $.webp() : $.util.noop())
     .pipe(gulp.dest(DEST))
     .pipe($.sizediff.stop({
       'title': 'Saved',
       formatFn: (data) => {
-        return filesize(data.diff) + ' (' + (100 - Math.round(data.diffPercent * 100))  + '%)';
+        return filesize(data.diff) + ' (' + (100 - Math.round((data.diffPercent||1) * 100))  + '%)';
       }
     }))
     .pipe($.plumber.stop());

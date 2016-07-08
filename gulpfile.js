@@ -8,17 +8,21 @@ const gulp = require('gulp'),
   os = require("os"),
   $ = require('gulp-load-plugins')(), //load all gulp plugins
   defConfig = {
+    'in_dir': './in',
+    'out_dir': './out',
     'width': 1024,
     'height': 1024,
     'quality': 0.75,
-    'createWebP': false
+    'createWebP': false,
+    'watermark': './watermark.png'
   },
-  userConfig = {},
-  SRC = './in/*.{jpg,jpeg,png,svg,gif}',
-  DEST = './out/';
+  userConfig = {};
 
 let config = {};
 Object.assign(config, defConfig, userConfig);
+
+let SRC = config.in_dir + '/**/*.{jpg,jpeg,png,svg,gif}',
+  DEST = config.out_dir;
 
 /*image processing pipeline
   - Resize the image.
@@ -40,15 +44,19 @@ const processImages = combiner.obj(
     optimizationLevel: 7,
     cache: false,
     use: [imageminMozjpeg()]
+  }),
+  $.watermark({
+    'image': config.watermark,
+    'resize': '100x100'
   })
 );
 
 gulp.task('clean', () => {
-  return del(DEST + '/**/*'); //delete all destination files, just to be clean
+  return del(config.out_dir + '/**/*'); //delete all destination files, just to be clean
 });
 gulp.task('default', () => {
   // place code here
-  return gulp.src(SRC, {nocase:true})
+  return gulp.src(SRC, {nocase:true, base: config.in_dir})
     .pipe($.plumber())  //node stream related error handling
     .pipe($.changed(DEST))
     .pipe($.sizediff.start())

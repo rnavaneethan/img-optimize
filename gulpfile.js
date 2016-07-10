@@ -5,8 +5,10 @@ const gulp = require('gulp'),
   parallel = require('concurrent-transform'),
   combiner = require('stream-combiner2'),
   filesize = require('filesize'),
+  fs = require('fs'),
   os = require("os"),
   $ = require('gulp-load-plugins')(), //load all gulp plugins
+  cfg = './config.json',
   defConfig = {
     'in_dir': './in',
     'out_dir': './out',
@@ -15,11 +17,40 @@ const gulp = require('gulp'),
     'quality': 0.75,
     'createWebP': false,
     'watermark': './watermark.png'
-  },
-  userConfig = {};
+  };
 
-let config = {};
+
+function fileExists(path) {
+
+  try  {
+    return fs.statSync(path).isFile();
+  }
+  catch (e) {
+
+    if (e.code == 'ENOENT') { // no such file or directory. File really does not exist
+      //console.log("File does not exist.");
+      return false;
+    }
+
+    //console.log("Exception fs.statSync (" + path + "): " + e);
+    throw e; // something else went wrong, we don't have rights, ...
+  }
+}
+
+let userConfig = {},
+  config = {};
+
+//Load config from config file
+if(fileExists(cfg)) {
+  userConfig = JSON.parse(fs.readFileSync(cfg));
+}
 Object.assign(config, defConfig, userConfig);
+
+//special check for watermark file
+if(config.watermark.length && !fileExists(config.watermark)) {
+  //skip watermark step
+  config.watermark = '';
+}
 
 let SRC = config.in_dir + '/**/*.{jpg,jpeg,png,svg,gif}',
   DEST = config.out_dir;
@@ -45,10 +76,10 @@ const processImages = combiner.obj(
     cache: false,
     use: [imageminMozjpeg()]
   }),
-  $.watermark({
+  config.watermark.length ? ($.watermark({
     'image': config.watermark,
     'resize': '100x100'
-  })
+  })) : $.util.noop()
 );
 
 gulp.task('clean', () => {

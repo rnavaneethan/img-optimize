@@ -1,0 +1,9 @@
+{
+  "in_dir": "./in",
+  "out_dir": "./out",
+  "width": 1024,
+  "height": 1024,
+  "quality": 0.75,
+  "createWebP": false,
+  "watermark": "./watermark.png"
+}

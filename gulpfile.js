@@ -70,16 +70,16 @@ const processImages = combiner.obj(
     'upscale': false,
     'quality': config.quality
   }),
+  config.watermark.length ? ($.watermark({
+    'image': config.watermark,
+    'resize': '100x100'
+  })) : $.util.noop(),
   $.imagemin({
     progressive: true,
     optimizationLevel: 7,
     cache: false,
     use: [imageminMozjpeg()]
-  }),
-  config.watermark.length ? ($.watermark({
-    'image': config.watermark,
-    'resize': '100x100'
-  })) : $.util.noop()
+  })
 );
 
 gulp.task('clean', () => {

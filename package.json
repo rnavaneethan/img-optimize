@@ -33,5 +33,8 @@
     "snyk": "1.19.1",
     "stream-combiner2": "^1.1.1"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "eslint": "^3.8.0"
+  }
 }

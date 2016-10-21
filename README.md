@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize)
+
 # imgoptimize
 Gulp wrapper to resize and optimize images
 

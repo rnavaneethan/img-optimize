@@ -1,12 +1,12 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize)
 
 # imgoptimize
-Gulp wrapper to resize and optimize images
+Gulp wrapper to resize and optimize images for the web
 
 ## Features
 * Resize and reduce bigger images
-* Reduce image quality for the web
-* Provision to create optimized WebP format (disabled by default)
+* Reduce image quality
+* Create optimized WebP format (disabled by default)
 * Add watermark to the images 
 
 ## Setup

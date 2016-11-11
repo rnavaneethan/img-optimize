@@ -38,7 +38,7 @@ Creating WebP image, dimension to resize etc., are configurable. Default values 
 * By default, images are resized to 1024 px in width/height and aspect ratio is kept intact.
 * GraphicsMagick & ImageMagick are required for image resizing. Please check your platform documentation/[gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) for more info.
 
-## Various image manipulation plug-ins used
+## Various image manipulation plug-ins used (Big Thanks to...)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 * [gulp-image-resize](https://github.com/scalableminds/gulp-image-resize)
 * [gulp-watermark](https://github.com/HAKASHUN/gulp-watermark)

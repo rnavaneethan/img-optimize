@@ -3,11 +3,37 @@
 # imgoptimize
 Gulp wrapper to resize and optimize images
 
-##Example
-* Create a directory 'in' and place all the images.
+## Features
+* Resize and reduce bigger images
+* Reduce image quality for the web
+* Provision to create optimized WebP format (disabled by default)
+* Add watermark to the images 
+
+## Setup
+This code is built based on gulp and various gulp plug-ins to resize and optimize images.
+### Pre-requisites
+You need node, npm & gulp globalling installed in your machine.
+
+[Download NodeJS](https://nodejs.org/en/download/)
+
+[Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
+### Install
+* Download the code from github
+~~~~~
+git clone https://github.com/rnavaneethan/img-optimize.git
+cd img-optimize
+npm install
+~~~~~
+Now you are ready.
+
+## How To
+* Create a directory 'in' and place/paste all the images that needs to be converted.
 * Run 'gulp' command.
 * Optimized and minified image will be available with same name in 'out' directory.
 
-###Notes
-* By default, image size are reduced to 1024 px in width/height and aspect ratio is kept intact.
-* GraphicsMagick & ImageMagick are required for imageresizing. Please check your platform documentation/gulp-image-resize for more info.
+### Advanced Usage
+Creating WebP image, dimension to resize etc., are configurable. Default values are provided in [config.json.tmpl](config.json.tmpl). Copy this file and rename it to 'config.json' and make required changes. Next run will pick up the updated configuration changes. 
+## Notes
+* By default, images are resized to 1024 px in width/height and aspect ratio is kept intact.
+* GraphicsMagick & ImageMagick are required for image resizing. Please check your platform documentation/[gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) for more info.

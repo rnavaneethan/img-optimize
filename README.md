@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) 
 
 # imgoptimize
 Gulp wrapper to resize and optimize images for the web

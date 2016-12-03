@@ -1,6 +1,6 @@
-language: javascript
+language: node_js
 node_js: 
-  - "node"
+  - "6.1"
 before_script:
   - npm install -g gulp
 install:

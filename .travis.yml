@@ -6,4 +6,4 @@ before_script:
 install:
   - npm install -g npm
   - npm install
-script: node --harmony gulp
+script: gulp

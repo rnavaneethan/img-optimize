@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) 
+[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) [![Build Status](https://travis-ci.org/rnavaneethan/img-optimize.svg?branch=master)](https://travis-ci.org/rnavaneethan/img-optimize) 
 
 # imgoptimize
 Gulp wrapper to resize and optimize images for the web

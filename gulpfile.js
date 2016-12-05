@@ -82,6 +82,11 @@ const processImages = combiner.obj(
   })
 );
 
+/*eslint-disable no-console */
+processImages.on('error', console.error.bind(console));
+
+/*eslint-enable no-console */
+
 gulp.task('clean', () => {
   return del(config.out_dir + '/**/*'); //delete all destination files, just to be clean
 });

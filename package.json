@@ -30,7 +30,7 @@
     "gulp-watermark": "0.0.1",
     "gulp-webp": "^2.3.0",
     "imagemin-mozjpeg": "^6.0.0",
-    "snyk": "1.23.0",
+    "snyk": "1.23.4",
     "stream-combiner2": "^1.1.1"
   },
   "snyk": true,

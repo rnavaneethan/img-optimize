@@ -1457,9 +1457,9 @@ gulp-gm@~0.0.3:
     gulp-util "^2.2.14"
     through2 "^0.4.1"
 
-gulp-image-resize@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/gulp-image-resize/-/gulp-image-resize-0.11.0.tgz#801ac28d01877ab4b531228766bdc101270de712"
+gulp-image-resize@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/gulp-image-resize/-/gulp-image-resize-0.12.0.tgz#454bf42797fa781a29ee8f35484231911274c70b"
   dependencies:
     async "~0.2.8"
     gulp-gm "~0.0.3"
@@ -2546,13 +2546,7 @@ mime-types@^2.1.12, mime-types@~2.1.7:
   dependencies:
     mime-db "~1.26.0"
 
-"minimatch@2 || 3", minimatch@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
-  dependencies:
-    brace-expansion "^1.0.0"
-
-minimatch@3.0.2:
+"minimatch@2 || 3", minimatch@3.0.2, minimatch@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.2.tgz#0f398a7300ea441e9c348c83d98ab8c9dbf9c40a"
   dependencies:

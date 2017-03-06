@@ -1,12 +1,23 @@
-version: v1.5.0
-ignore: {}
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:qs:20170213':
+    - snyk > request > qs:
+        reason: No upgrade available
+        expires: '2017-04-05T15:02:20.639Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > minimatch:
-        patched: '2016-06-24T15:41:22.790Z'
+        patched: '2017-03-06T14:59:57.717Z'
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
-        patched: '2016-06-24T15:41:22.790Z'
+        patched: '2017-03-06T14:59:57.717Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
+      gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2017-03-06T14:59:57.717Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
+      gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-03-06T14:59:57.717Z'

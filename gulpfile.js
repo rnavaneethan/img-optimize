@@ -2,6 +2,7 @@
 const gulp = require('gulp'),
   del = require('del'),
   imageminMozjpeg = require('imagemin-mozjpeg'),
+  zopfli = require('imagemin-zopfli'),
   parallel = require('concurrent-transform'),
   combiner = require('stream-combiner2'),
   filesize = require('filesize'),
@@ -78,7 +79,8 @@ const processImages = combiner.obj(
     progressive: true,
     optimizationLevel: 7,
     cache: false,
-    use: [imageminMozjpeg()]
+    use: [imageminMozjpeg(),
+          zopfli()]
   })
 );
 

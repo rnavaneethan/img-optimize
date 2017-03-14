@@ -23,7 +23,7 @@ You need node, npm & gulp globalling installed in your machine.
 ~~~~~
 git clone https://github.com/rnavaneethan/img-optimize.git
 cd img-optimize
-npm install
+yarn
 ~~~~~
 Now you are ready.
 

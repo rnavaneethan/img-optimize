@@ -22,7 +22,7 @@
     "gulp-changed": "^2.0.0",
     "gulp-filesize": "0.0.6",
     "gulp-image-resize": "^0.12.0",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^3.2.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sizediff": "0.0.2",
@@ -30,12 +30,12 @@
     "gulp-watermark": "0.0.1",
     "gulp-webp": "^2.3.0",
     "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-zopfli": "^5.0.0",
-    "snyk": "^1.25.2",
+    "imagemin-zopfli": "^5.1.0",
+    "snyk": "^1.26.1",
     "stream-combiner2": "^1.1.1"
   },
   "snyk": true,
   "devDependencies": {
-    "eslint": "^3.17.1"
+    "eslint": "^3.19.0"
   }
 }

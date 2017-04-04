@@ -15,7 +15,6 @@ const gulp = require('gulp'),
     'out_dir': './out',
     'width': 1024,
     'height': 1024,
-    'quality': 0.75,
     'createWebP': false,
     'watermark': './watermark.png'
   };
@@ -74,8 +73,8 @@ const processImages = combiner.obj(
     progressive: true,
     optimizationLevel: 7,
     cache: false,
-    use: [imageminMozjpeg(),
-          zopfli()]
+    use: [imageminMozjpeg({progressive: true}),
+          zopfli({more: true})]
   })
 );
 

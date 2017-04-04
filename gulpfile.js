@@ -64,12 +64,7 @@ let SRC = config.in_dir + '/**/*.{jpg,jpeg,png,svg,gif}',
 const processImages = combiner.obj(
   $.imageResize({
     'width': config.width,
-    'height': config.height,
-    'crop': false,
-    'autoOrient': true,
-    'overwrite': false,
-    'upscale': false,
-    'quality': config.quality
+    'height': config.height
   }),
   config.watermark.length ? ($.watermark({
     'image': config.watermark,

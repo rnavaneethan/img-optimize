@@ -292,10 +292,6 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-builtins@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/builtins/-/builtins-0.0.7.tgz#355219cd6cf18dbe7c01cc7fd2dce765cfdc549a"
-
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -3287,20 +3283,12 @@ snyk-config@1.0.1:
     nconf "^0.7.2"
     path-is-absolute "^1.0.0"
 
-snyk-module@1.8.1, snyk-module@^1.8.1:
+snyk-module@1.8.1, snyk-module@^1.6.0, snyk-module@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/snyk-module/-/snyk-module-1.8.1.tgz#31d5080fb1c0dfd6fa8567dd34a523fd02bf1fca"
   dependencies:
     debug "^2.2.0"
     hosted-git-info "^2.1.4"
-
-snyk-module@^1.6.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/snyk-module/-/snyk-module-1.7.0.tgz#07c6ca8556d281de6f9e2368c04ecb6dd1f2631a"
-  dependencies:
-    debug "^2.2.0"
-    hosted-git-info "^2.1.4"
-    validate-npm-package-name "^2.2.2"
 
 snyk-policy@1.7.1:
   version "1.7.1"
@@ -3364,9 +3352,9 @@ snyk-try-require@^1.1.1, snyk-try-require@^1.2.0:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.27.0.tgz#133a1ccd1efd6681959ce970ee512be97209e6fb"
+snyk@^1.28.0:
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.28.0.tgz#f805cc5917d57203aa7fe055650e70d1b31daba2"
   dependencies:
     abbrev "^1.0.7"
     ansi-escapes "^1.3.0"
@@ -3832,12 +3820,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
-
-validate-npm-package-name@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-2.2.2.tgz#f65695b22f7324442019a3c7fa39a6e7fd299085"
-  dependencies:
-    builtins "0.0.7"
 
 verror@1.3.6:
   version "1.3.6"

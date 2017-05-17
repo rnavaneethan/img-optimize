@@ -1,31 +1,42 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.0
+version: v1.7.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:qs:20170213':
     - snyk > request > qs:
         reason: No upgrade available
         expires: '2017-04-05T15:02:20.639Z'
+  'npm:ms:20170412':
+    - gulp-watermark > gm > debug > ms:
+        reason: No update available.
+        expires: '2017-06-16T15:31:46.487Z'
+    - gulp-image-resize > gulp-gm > gm > debug > ms:
+        reason: None given
+        expires: '2017-06-16T15:31:46.488Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > minimatch:
-        patched: '2017-04-27T18:06:52.859Z'
+        patched: '2017-05-17T15:27:28.145Z'
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
-        patched: '2017-04-27T18:06:52.859Z'
+        patched: '2017-05-17T15:27:28.145Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
       gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
-        patched: '2017-04-27T18:06:52.859Z'
+        patched: '2017-05-17T15:27:28.145Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
       gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-05-17T15:27:28.145Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2017-03-06T14:59:57.717Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-03-06T14:59:57.717Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2017-03-09T17:15:05.454Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-03-09T17:15:05.454Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2017-04-27T18:06:52.859Z'
-    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
-        patched: '2017-03-06T14:59:57.717Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
-        patched: '2017-03-06T14:59:57.717Z'
-    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
-        patched: '2017-03-09T17:15:05.454Z'
-    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
-        patched: '2017-03-09T17:15:05.454Z'
+        patched: '2017-04-27T18:06:52.859Z'

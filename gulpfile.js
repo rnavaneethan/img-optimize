@@ -22,7 +22,7 @@ const gulp = require('gulp'),
 
 function fileExists(path) {
 
-  try  {
+  try {
     return fs.statSync(path).isFile();
   }
   catch (e) {
@@ -41,13 +41,13 @@ let userConfig = {},
   config = {};
 
 //Load config from config file
-if(fileExists(cfg)) {
+if (fileExists(cfg)) {
   userConfig = JSON.parse(fs.readFileSync(cfg));
 }
 Object.assign(config, defConfig, userConfig);
 
 //special check for watermark file
-if(config.watermark.length && !fileExists(config.watermark)) {
+if (config.watermark.length && !fileExists(config.watermark)) {
   //skip watermark step
   config.watermark = '';
 }
@@ -74,7 +74,7 @@ const processImages = combiner.obj(
     optimizationLevel: 7,
     cache: false,
     use: [imageminMozjpeg({progressive: true}),
-          zopfli({more: true})]
+      zopfli({more: true})]
   })
 );
 
@@ -88,18 +88,18 @@ gulp.task('clean', () => {
 });
 gulp.task('default', () => {
   // place code here
-  return gulp.src(SRC, {nocase:true, base: config.in_dir})
+  return gulp.src(SRC, {nocase: true, base: config.in_dir})
     .pipe($.plumber())  //node stream related error handling
     .pipe($.changed(DEST))
     .pipe($.sizediff.start())
-    .pipe(parallel(processImages,os.cpus().length))
+    .pipe(parallel(processImages, os.cpus().length))
     .pipe(gulp.dest(DEST))
     .pipe(config.createWebP ? $.webp() : $.util.noop())
     .pipe(gulp.dest(DEST))
     .pipe($.sizediff.stop({
       'title': 'Saved',
       formatFn: (data) => {
-        return filesize(data.diff) + ' (' + (100 - Math.round((data.diffPercent||1) * 100))  + '%)';
+        return filesize(data.diff) + ' (' + (100 - Math.round((data.diffPercent || 1) * 100)) + '%)';
       }
     }))
     .pipe($.plumber.stop());

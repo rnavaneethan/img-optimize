@@ -13,17 +13,62 @@ ignore:
     - gulp-image-resize > gulp-gm > gm > debug > ms:
         reason: None given
         expires: '2017-06-16T15:31:46.488Z'
+  'npm:tunnel-agent:20170305':
+    - imagemin-mozjpeg > mozjpeg > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.274Z'
+    - imagemin-mozjpeg > mozjpeg > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.274Z'
+    - imagemin-zopfli > zopflipng-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.275Z'
+    - imagemin-zopfli > zopflipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.276Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.276Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.277Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.277Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.278Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.278Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.279Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.279Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-08-06T18:15:34.279Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > minimatch:
         patched: '2017-05-17T15:27:28.145Z'
+      gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2017-07-07T18:10:53.022Z'
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
         patched: '2017-05-17T15:27:28.145Z'
+      gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2017-07-07T18:10:53.022Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
+      gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2017-07-07T18:10:53.022Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-07-07T09:40:13.258Z'
+      gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2017-07-07T18:10:53.022Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2017-03-06T14:59:57.717Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
@@ -42,6 +87,6 @@ patch:
         patched: '2017-05-17T15:27:28.145Z'
   'npm:ms:20170412':
     - gulp-watermark > gm > debug > ms:
-        patched: '2017-05-26T01:59:11.431Z'
+        patched: '2017-07-07T18:10:53.022Z'
     - gulp-image-resize > gulp-gm > gm > debug > ms:
-        patched: '2017-05-26T01:59:11.431Z'
+        patched: '2017-07-07T18:10:53.022Z'

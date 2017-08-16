@@ -69,13 +69,14 @@ const processImages = combiner.obj(
     'image': config.watermark,
     'resize': '100x100'
   })) : $.util.noop(),
-  $.imagemin({
-    progressive: true,
-    optimizationLevel: 7,
-    cache: false,
-    use: [imageminMozjpeg({progressive: true}),
-      zopfli({more: true})]
-  })
+  $.imagemin([
+    $.imagemin.gifsicle({interlaced: true}),
+    $.imagemin.jpegtran({progressive: true}),
+    $.imagemin.optipng({optimizationLevel: 5}),
+    $.imagemin.svgo({plugins: [{removeViewBox: true}]}),
+    imageminMozjpeg({progressive: true}),
+    zopfli({more: true})
+  ])
 );
 
 /*eslint-disable no-console */

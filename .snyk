@@ -126,3 +126,8 @@ patch:
         patched: '2017-07-07T18:10:53.022Z'
     - gulp-image-resize > gulp-gm > gm > debug > ms:
         patched: '2017-07-07T18:10:53.022Z'
+  'npm:debug:20170905':
+    - gulp-watermark > gm > debug:
+        patched: '2017-09-27T10:02:22.042Z'
+    - gulp-image-resize > gulp-gm > gm > debug:
+        patched: '2017-09-27T10:02:22.042Z'

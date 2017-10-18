@@ -4,6 +4,7 @@
   "description": "Grunt wrapper to resize & optimize images",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
     "test": "snyk test",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"

@@ -36,7 +36,7 @@ Now you are ready.
 Creating WebP image, dimension to resize etc., are configurable. Default values are provided in [config.json.tmpl](config.json.tmpl). Copy this file and rename it to 'config.json' and make required changes. Next run will pick up the updated configuration changes. 
 ## Notes
 * By default, images are resized to 1024 px in width/height and aspect ratio is kept intact.
-* GraphicsMagick & ImageMagick are required for image resizing. Please check your platform documentation/[gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) for more info.
+* GraphicsMagick & ImageMagick are required for image resizing. Please check your platform documentation/[gulp-image-resize](https://github.com/scalableminds/gulp-image-resize) for more info. 
 
 ## Various image manipulation plug-ins used (Big Thanks to...)
 * [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)

@@ -44,3 +44,5 @@ Creating WebP image, dimension to resize etc., are configurable. Default values 
 * [gulp-watermark](https://github.com/HAKASHUN/gulp-watermark)
 * [gulp-webp](https://github.com/sindresorhus/gulp-webp)
 * [imagemin-mozjpeg](https://github.com/imagemin/imagemin-mozjpeg)
+--Test comment--
+

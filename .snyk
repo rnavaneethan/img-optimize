@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.8.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:qs:20170213':
@@ -86,6 +86,42 @@ ignore:
     - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-09-15T16:14:51.038Z'
+    - imagemin-mozjpeg > mozjpeg > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - imagemin-zopfli > zopflipng-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - imagemin-mozjpeg > mozjpeg > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - imagemin-zopfli > zopflipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2017-12-08T15:24:24.781Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':

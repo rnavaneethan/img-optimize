@@ -34,8 +34,12 @@ You need node (and optionally Yarn) globally installed in your machine.
 * Download the code from github
 
 ```sh
+#clone the repository
 git clone https://github.com/rnavaneethan/img-optimize.git
+#go into the checkout directory
 cd img-optimize
+#either of below two commands
+npm install
 yarn
 ```
 

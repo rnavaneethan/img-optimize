@@ -5,6 +5,8 @@
 		// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
 		"dbaeumer.vscode-eslint",
 		"EditorConfig.EditorConfig",
+		"hnw.vscode-auto-open-markdown-preview",
+		"DavidAnson.vscode-markdownlint",
 		"bajdzis.vscode-twig-pack"
 	]
 }

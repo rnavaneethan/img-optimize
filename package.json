@@ -32,8 +32,8 @@
     "gulp-webp": "2.3.0",
     "imagemin-mozjpeg": "6.0.0",
     "imagemin-zopfli": "5.1.0",
-    "stream-combiner2": "^1.1.1",
-    "snyk": "^1.61.2"
+    "snyk": "^1.61.2",
+    "stream-combiner2": "^1.1.1"
   },
   "snyk": true,
   "devDependencies": {

@@ -2,6 +2,6 @@ language: node_js
 node_js: 
   - "node"
 before_script:
-  - npm install -g gulp
+  - npm install -g npm@latest
 cache: npm install
 script: npm run start

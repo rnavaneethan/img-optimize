@@ -3,5 +3,5 @@ node_js:
   - "6.1"
 before_script:
   - npm install -g gulp
-cache: yarn
-script: gulp
+cache: npm install
+script: npm run start

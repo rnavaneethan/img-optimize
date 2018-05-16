@@ -21,11 +21,10 @@ This code is built based on gulp and various gulp plug-ins to resize and optimiz
 
 ### Pre-requisites
 
-You need node (and optionally Yarn) globally installed in your machine.
+You need node globally installed in your machine.
 
 [Download NodeJS](https://nodejs.org/en/download/)
 
-[Install Yarn Package Manager](https://yarnpkg.com/en/docs/install)
 
 [Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
@@ -38,9 +37,8 @@ You need node (and optionally Yarn) globally installed in your machine.
 git clone https://github.com/rnavaneethan/img-optimize.git
 #go into the checkout directory
 cd img-optimize
-#either of below two commands
+#Install necessary dependencies
 npm install
-yarn
 ```
 
 Now you are ready.

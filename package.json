@@ -16,7 +16,7 @@
     "concurrent-transform": "^1.0.0",
     "del": "3.0.0",
     "filesize": "^3.5.9",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-changed": "^3.0.0",
     "gulp-filesize": "0.0.6",
     "gulp-image-resize": "^0.13.0",
@@ -27,7 +27,7 @@
     "gulp-util": "^3.0.7",
     "gulp-watermark": "^0.0.1",
     "gulp-webp": "3.0.0",
-    "imagemin-mozjpeg": "6.0.0",
+    "imagemin-mozjpeg": "7.0.0",
     "imagemin-zopfli": "5.1.0",
     "stream-combiner2": "^1.1.1"
   },

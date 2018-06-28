@@ -32,8 +32,8 @@
     "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^4.4.1",
-    "eslint-plugin-prettier": "^2.3.1",
-    "prettier": "^1.7.4"
+    "eslint": "^5.0.1",
+    "eslint-plugin-prettier": "^2.6.1",
+    "prettier": "^1.13.6"
   }
 }

@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git@github.com:rnavaneethan/imgoptimize.git"
   },
+  "engines": {
+    "node": ">=10.7.0"
+  },
   "author": "Ravindran",
   "license": "ISC",
   "dependencies": {

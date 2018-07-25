@@ -1,6 +1,8 @@
 /*Gulp JS code*/
 const gulp = require("gulp"),
   del = require("del"),
+  util = require("util"),
+  exec = util.promisify(require("child_process").exec),
   imageminMozjpeg = require("imagemin-mozjpeg"),
   zopfli = require("imagemin-zopfli"),
   parallel = require("concurrent-transform"),
@@ -64,9 +66,9 @@ const processImages = combiner.obj(
   }),
   config.watermark.length
     ? $.watermark({
-        image: config.watermark,
-        resize: "100x100"
-      })
+      image: config.watermark,
+      resize: "100x100"
+    })
     : $.util.noop(),
   $.imagemin([
     $.imagemin.gifsicle({ interlaced: true }),
@@ -83,10 +85,15 @@ processImages.on("error", console.error.bind(console));
 
 /*eslint-enable no-console */
 
+gulp.task("testGM", () => {
+  //GraphicsMagick is one of the required binary/library. Check for it's presence
+  return exec("gm version");
+});
+
 gulp.task("clean", () => {
   return del(config.out_dir + "/**/*"); //delete all destination files, just to be clean
 });
-gulp.task("default", () => {
+gulp.task("processImg", () => {
   // place code here
   return gulp
     .src(SRC, { nocase: true, base: config.in_dir })
@@ -112,3 +119,5 @@ gulp.task("default", () => {
     )
     .pipe($.plumber.stop());
 });
+
+gulp.task("default", gulp.series("testGM", "processImg"));

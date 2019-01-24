@@ -29,7 +29,7 @@
     "gulp-sizediff": "0.0.2",
     "gulp-util": "^3.0.7",
     "gulp-watermark": "^0.0.1",
-    "gulp-webp": "3.0.0",
+    "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "7.0.0",
     "imagemin-zopfli": "5.1.0",
     "stream-combiner2": "^1.1.1"

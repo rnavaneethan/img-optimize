@@ -66,9 +66,9 @@ const processImages = combiner.obj(
   }),
   config.watermark.length
     ? $.watermark({
-      image: config.watermark,
-      resize: "100x100"
-    })
+        image: config.watermark,
+        resize: "100x100"
+      })
     : $.util.noop(),
   $.imagemin([
     $.imagemin.gifsicle({ interlaced: true }),

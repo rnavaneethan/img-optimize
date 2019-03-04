@@ -17,26 +17,26 @@
   "license": "ISC",
   "dependencies": {
     "concurrent-transform": "^1.0.0",
-    "del": "3.0.0",
-    "filesize": "^3.5.9",
+    "del": "4.0.0",
+    "filesize": "^4.1.2",
     "gulp": "^4.0.0",
     "gulp-changed": "^3.0.0",
     "gulp-filesize": "0.0.6",
     "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "4.1.0",
+    "gulp-imagemin": "5.0.3",
     "gulp-load-plugins": "^1.4.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-sizediff": "0.0.2",
     "gulp-util": "^3.0.7",
     "gulp-watermark": "^0.0.1",
-    "gulp-webp": "3.0.0",
-    "imagemin-mozjpeg": "7.0.0",
-    "imagemin-zopfli": "5.1.0",
+    "gulp-webp": "4.0.1",
+    "imagemin-mozjpeg": "8.0.0",
+    "imagemin-zopfli": "6.0.0",
     "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "eslint-plugin-prettier": "^2.6.2",
-    "prettier": "^1.13.7"
+    "eslint": "^5.15.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4"
   }
 }

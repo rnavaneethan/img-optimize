@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrent-transform": "^1.0.0",
-    "del": "4.0.0",
+    "del": "4.1.0",
     "filesize": "^4.1.2",
     "gulp": "^4.0.0",
     "gulp-changed": "^3.0.0",

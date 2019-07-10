@@ -4,7 +4,9 @@
   "description": "Grunt wrapper to resize & optimize images",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -32,11 +34,13 @@
     "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "8.0.0",
     "imagemin-zopfli": "6.0.0",
-    "stream-combiner2": "^1.1.1"
+    "stream-combiner2": "^1.1.1",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "eslint": "^5.15.0",
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.16.4"
-  }
+  },
+  "snyk": true
 }

@@ -20,11 +20,11 @@
     "del": "5.1.0",
     "filesize": "^6.1.0",
     "gulp": "^4.0.2",
-    "gulp-changed": "^4.0.0",
+    "gulp-changed": "^4.0.2",
     "gulp-filesize": "0.0.6",
     "gulp-image-resize": "^0.13.1",
-    "gulp-imagemin": "6.1.0",
-    "gulp-load-plugins": "^2.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-load-plugins": "^2.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-sizediff": "0.0.2",
     "gulp-util": "^3.0.7",
@@ -35,8 +35,8 @@
     "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1"
   }
 }

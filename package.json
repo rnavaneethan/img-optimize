@@ -31,7 +31,7 @@
     "gulp-watermark": "^0.0.1",
     "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "8.0.0",
-    "imagemin-zopfli": "6.0.0",
+    "imagemin-zopfli": "7.0.0",
     "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {

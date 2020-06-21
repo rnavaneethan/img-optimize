@@ -4,7 +4,7 @@
   "description": "Grunt wrapper to resize & optimize images",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint gulpfile.js",
     "start": "gulp"
   },
   "repository": {

@@ -18,7 +18,7 @@ const gulp = require("gulp"),
     width: 1024,
     height: 1024,
     createWebP: false,
-    watermark: "./watermark.png"
+    watermark: "./watermark.png",
   };
 
 function fileExists(path) {
@@ -62,12 +62,12 @@ let SRC = config.in_dir + "/**/*.{jpg,jpeg,png,svg,gif}",
 const processImages = combiner.obj(
   $.imageResize({
     width: config.width,
-    height: config.height
+    height: config.height,
   }),
   config.watermark.length
     ? $.watermark({
         image: config.watermark,
-        resize: "100x100"
+        resize: "100x100",
       })
     : $.util.noop(),
   $.imagemin([
@@ -76,7 +76,7 @@ const processImages = combiner.obj(
     $.imagemin.optipng({ optimizationLevel: 5 }),
     $.imagemin.svgo({ plugins: [{ removeViewBox: true }] }),
     imageminMozjpeg({ progressive: true }),
-    zopfli({ more: true })
+    zopfli({ more: true }),
   ])
 );
 
@@ -107,14 +107,14 @@ gulp.task("processImg", () => {
     .pipe(
       $.sizediff.stop({
         title: "Saved",
-        formatFn: data => {
+        formatFn: (data) => {
           return (
             filesize(data.diff) +
             " (" +
             (100 - Math.round((data.diffPercent || 1) * 100)) +
             "%)"
           );
-        }
+        },
       })
     )
     .pipe($.plumber.stop());

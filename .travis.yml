@@ -4,4 +4,4 @@ node_js:
 script: 
   - npm run start
 before_install:
-  - yes | pecl install imagick
+  - apt-get -y install graphicsmagick

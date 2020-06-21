@@ -30,13 +30,13 @@
     "gulp-load-plugins": "^2.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-sizediff": "0.0.2",
-    "gulp-util": "^3.0.7",
     "gulp-watermark": "^0.0.1",
     "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-zopfli": "7.0.0",
+    "snyk": "^1.346.0",
     "stream-combiner2": "^1.1.1",
-    "snyk": "^1.346.0"
+    "through2": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^7.3.0",

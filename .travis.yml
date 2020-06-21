@@ -4,4 +4,4 @@ node_js:
 script: 
   - npm run start
 before_install:
-  - apt-get -y install graphicsmagick
+  - sudo apt-get -y install graphicsmagick

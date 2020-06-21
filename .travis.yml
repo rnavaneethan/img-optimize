@@ -3,3 +3,5 @@ node_js:
   - "node"
 script: 
   - npm run start
+before_install:
+  - yes | pecl install imagick

@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.1
+version: v1.15.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:qs:20170213':
@@ -29,51 +29,27 @@ ignore:
     - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.276Z'
-      gulp-webp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.277Z'
-      gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.277Z'
-      gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.278Z'
-      gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.278Z'
-      gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.279Z'
-      gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-webp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.279Z'
-      gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.342Z'
     - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-08-06T18:15:34.279Z'
-      gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
-        reason: None given
-        expires: '2018-03-18T16:54:45.343Z'
     - imagemin-mozjpeg > mozjpeg > bin-build > download > caw > tunnel-agent:
         reason: None given
         expires: '2017-09-15T16:14:51.037Z'
@@ -182,6 +158,30 @@ ignore:
     - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
         reason: None given
         expires: '2018-01-19T15:46:18.480Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-webp > imagemin-webp > cwebp-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.342Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        reason: None given
+        expires: '2018-03-18T16:54:45.343Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
@@ -227,3 +227,12 @@ patch:
         patched: '2017-09-27T10:02:22.042Z'
     - gulp-image-resize > gulp-gm > gm > debug:
         patched: '2017-09-27T10:02:22.042Z'
+  SNYK-JS-LODASH-567746:
+    - eslint > lodash:
+        patched: '2020-06-21T04:45:41.581Z'
+    - gulp-image-resize > lodash:
+        patched: '2020-06-21T04:45:41.581Z'
+    - eslint > table > lodash:
+        patched: '2020-06-21T04:45:41.581Z'
+    - gulp-image-resize > async > lodash:
+        patched: '2020-06-21T04:45:41.581Z'

@@ -33,12 +33,12 @@
     "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-zopfli": "7.0.0",
-    "snyk": "^1.346.0",
+    "snyk": "^1.349.0",
     "stream-combiner2": "^1.1.1",
-    "through2": "^3.0.1"
+    "through2": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "^7.3.0",
+    "eslint": "^7.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "minimist": "^1.2.5",
     "prettier": "^2.0.5"

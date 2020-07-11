@@ -24,6 +24,7 @@
     "filesize": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "7.1.0",
     "gulp-load-plugins": "^2.0.3",
@@ -34,8 +35,7 @@
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-zopfli": "7.0.0",
     "snyk": "^1.349.0",
-    "stream-combiner2": "^1.1.1",
-    "through2": "^3.0.2"
+    "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {
     "eslint": "^7.3.1",

@@ -25,7 +25,6 @@ You need node globally installed in your machine.
 
 [Download NodeJS](https://nodejs.org/en/download/)
 
-
 [Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 ### Install

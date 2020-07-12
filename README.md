@@ -6,7 +6,7 @@ This whole process is difficult for non-developers. This setup is to make one st
 
 Gulp wrapper to resize and optimize images for the web
 
-[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) [![Build Status](https://travis-ci.org/rnavaneethan/img-optimize.svg?branch=master)](https://travis-ci.org/rnavaneethan/img-optimize) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/rnavaneethan/img-optimize/master/LICENSE) [![dependencies Status](https://david-dm.org/rnavaneethan/img-optimize/status.svg)](https://david-dm.org/rnavaneethan/img-optimize) [![devDependencies Status](https://david-dm.org/rnavaneethan/img-optimize/dev-status.svg)](https://david-dm.org/rnavaneethan/img-optimize?type=dev) [![Greenkeeper badge](https://badges.greenkeeper.io/rnavaneethan/img-optimize.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/rnavaneethan/img-optimize/badge.svg)](https://snyk.io/test/github/rnavaneethan/img-optimize) [![Build Status](https://travis-ci.org/rnavaneethan/img-optimize.svg?branch=master)](https://travis-ci.org/rnavaneethan/img-optimize) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/rnavaneethan/img-optimize/master/LICENSE) [![dependencies Status](https://david-dm.org/rnavaneethan/img-optimize/status.svg)](https://david-dm.org/rnavaneethan/img-optimize) [![devDependencies Status](https://david-dm.org/rnavaneethan/img-optimize/dev-status.svg)](https://david-dm.org/rnavaneethan/img-optimize?type=dev)
 
 ## Features
 
@@ -24,7 +24,6 @@ This code is built based on gulp and various gulp plug-ins to resize and optimiz
 You need node globally installed in your machine.
 
 [Download NodeJS](https://nodejs.org/en/download/)
-
 
 [Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 

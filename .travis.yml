@@ -6,7 +6,7 @@ cache:
 node_js: 
   - "node"
 script: 
-  - pnpm run start
+  - pnpm run test
 before_install:
   - sudo apt-get -y install graphicsmagick
   - curl -L https://unpkg.com/@pnpm/self-installer | node

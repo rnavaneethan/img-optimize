@@ -2,7 +2,7 @@
 const gulp = require("gulp"),
   del = require("del"),
   util = require("util"),
-  through2 = require("through2"),
+  gulpif = require("gulp-if"),
   exec = util.promisify(require("child_process").exec),
   imageminMozjpeg = require("imagemin-mozjpeg"),
   zopfli = require("imagemin-zopfli"),
@@ -65,12 +65,13 @@ const processImages = combiner.obj(
     width: config.width,
     height: config.height,
   }),
-  config.watermark.length
-    ? $.watermark({
-        image: config.watermark,
-        resize: "100x100",
-      })
-    : through2.obj((chunk, enc, cb) => cb(null, chunk)),
+  gulpif(
+    config.watermark.length,
+    $.watermark({
+      image: config.watermark,
+      resize: "100x100",
+    })
+  ),
   $.imagemin([
     $.imagemin.gifsicle({ interlaced: true }),
     $.imagemin.mozjpeg({ progressive: true }),
@@ -103,11 +104,7 @@ gulp.task("processImg", () => {
     .pipe($.sizediff.start())
     .pipe(parallel(processImages, os.cpus().length))
     .pipe(gulp.dest(DEST))
-    .pipe(
-      config.createWebP
-        ? $.webp()
-        : through2.obj((chunk, enc, cb) => cb(null, chunk))
-    )
+    .pipe(gulpif(config.createWebP, $.webp()))
     .pipe(gulp.dest(DEST))
     .pipe(
       $.sizediff.stop({

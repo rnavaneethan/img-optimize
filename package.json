@@ -38,11 +38,11 @@
     "stream-combiner2": "^1.1.1"
   },
   "devDependencies": {
-    "eslint": "^7.7.0",
+    "eslint": "^7.16.0",
     "eslint-plugin-prettier": "^3.1.4",
     "minimist": "^1.2.5",
     "prettier": "^2.1.2",
-    "snyk": "^1.420.0"
+    "snyk": "^1.685.0"
   },
   "resolutions": {
     "minimist": "^1.2.5"

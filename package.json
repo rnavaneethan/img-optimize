@@ -7,7 +7,7 @@
     "test": "gulp testGM",
     "lint": "eslint gulpfile.js",
     "start": "gulp",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepare": "npm run snyk-protect"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "author": "Ravindran",
   "license": "ISC",
   "dependencies": {
+    "@snyk/protect": "^1.1140.0",
     "concurrent-transform": "^1.0.0",
     "del": "^6.0.0",
     "filesize": "^6.1.0",
@@ -41,8 +42,7 @@
     "eslint": "^8.37.0",
     "eslint-plugin-prettier": "^4.2.1",
     "minimist": "^1.2.5",
-    "prettier": "^2.1.2",
-    "snyk": "^1.420.0"
+    "prettier": "^2.1.2"
   },
   "resolutions": {
     "minimist": "^1.2.5"

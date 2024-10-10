@@ -22,7 +22,7 @@
   "dependencies": {
     "@snyk/protect": "^1.1140.0",
     "concurrent-transform": "^1.0.0",
-    "del": "^6.0.0",
+    "del": "^8.0.0",
     "filesize": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.2",
